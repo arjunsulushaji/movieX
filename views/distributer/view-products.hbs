@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <div class="pt-5" style="float: left; width:'50%'">
+            <div>
+                <h3 class="" style="text-align: center;">CURRENT MOVIE</h3><hr>
+                <a href="/distributer/add-current" class="btn btn-success">Add Current movie</a>
+            </div>
+            <table class="table mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Movie name</th>
+                        <th scope="col">Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each products}}
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{this.MoiveName}}</td>
+                        <td><img style="width: 50px; height:'50px;'" src="{{this.Image}}" alt=""></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="" style="float: left; width:'50%'">
+
+        </div>
+    </div>
+</section>
