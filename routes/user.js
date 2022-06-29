@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   let products=[
-    {
+    { 
       MoiveName:'Bermuda',
       Image:"https://static.toiimg.com/photo/83036150.cms"
     },
