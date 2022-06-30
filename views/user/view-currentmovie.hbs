@@ -1,0 +1,18 @@
+    <section>
+        <div class="container mt-4">
+                <h2 style="text-align: center;">Recommented Movie</h2>
+            <div class="row pt-3">
+                {{#each CurrentMovieData}}
+                <div class="col-md-3">
+                    <div class="card" style="width: 16rem; height: 31rem;">
+                        <img src="/movie-images/{{this._id}}.jpg" class="card-img-top" alt="..." style="height: 25rem; width:16rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.movieName}}</h5>
+                            <a href="#" class="btn btn-primary">Book Tickets</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
