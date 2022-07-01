@@ -14,17 +14,36 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Upcomming movie<span class="sr-only">(current)</span></a>
                 </li>
+                {{#if users}}
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Booked Tickets<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Reserved Tickets<span class="sr-only">(current)</span></a>
                 </li>
+                {{/if}}
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 mr-4" type="submit">Search</button>
             </form>
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{#if users}}
+                    {{users.UserName}}
+                    {{else}}
+                     Account
+                    {{/if}}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {{#if users}}
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                    {{else}}
+                    <a class="dropdown-item" href="/user-login">Login</a>
+                    {{/if}}
+                </div>
+            </div>
         </div>
     </nav>
 </header>

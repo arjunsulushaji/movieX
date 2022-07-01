@@ -1,11 +1,13 @@
-    <section>
-        <div class="container mt-4">
-                <h2 style="text-align: center;">Recommented Movie</h2>
-            <div class="row pt-3">
+<section>
+    <div class="container">
+        <div class="mt-4" style="width: 100%;">
+            <h2 style="text-align: center;"><u>Recommented Movie</u></h2>
+            <div class="row p-3">
                 {{#each CurrentMovieData}}
                 <div class="col-md-3">
                     <div class="card" style="width: 16rem; height: 31rem;">
-                        <img src="/movie-images/{{this._id}}.jpg" class="card-img-top" alt="..." style="height: 25rem; width:16rem;">
+                        <img src="/movie-images/{{this._id}}.jpg" class="card-img-top" alt="..."
+                            style="height: 25rem; width:16rem;">
                         <div class="card-body">
                             <h5 class="card-title">{{this.movieName}}</h5>
                             <a href="#" class="btn btn-primary">Book Tickets</a>
@@ -15,4 +17,23 @@
                 {{/each}}
             </div>
         </div>
-    </section>
+
+        <div class="mt-4">
+            <h2 style="text-align: center;"><u>Upcomming Movie</u></h2>
+            <div class=" row pt-3" style="width: 100%;">
+                {{#each UpcommingMovieData}}
+                <div class="col-md-3">
+                    <div class="card" style="width: 16rem; height: 31rem;">
+                        <img src="/upcomming-images/{{this._id}}.jpg" class="card-img-top" alt="..."
+                            style="height: 25rem; width:16rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.UpcommingMovieName}}</h5>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>

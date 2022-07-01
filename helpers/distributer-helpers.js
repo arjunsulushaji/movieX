@@ -14,5 +14,17 @@ module.exports={
             let CurrentMovieData=await db.get().collection(collection.CURRENT_MOVIE).find().toArray()
             resolve(CurrentMovieData)
         })
+    },
+
+    addUpcommingMovie:(UpcommingMovie,callback)=>{
+        db.get().collection('UpcommingMovie').insertOne(UpcommingMovie).then((data)=>{
+            callback(data.insertedId)
+        })
+    },
+    getUpcommingMovie:()=>{
+        return new Promise(async(resolve,rejects)=>{
+            let UpcommingMovieData=await db.get().collection(collection.UPCOMMING_MOVIE).find().toArray()
+            resolve(UpcommingMovieData)
+        })
     }
 }
